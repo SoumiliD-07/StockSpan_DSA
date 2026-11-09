@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Span Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Stock Span Visualizer</h1>
+            <p>Analyze stock prices using the Stack Data Structure</p>
+        </header>
+
+        <section class="input-section">
+
+            <h2>Enter Stock Prices</h2>
+
+            <p>Enter prices separated by spaces or commas.</p>
+
+            <input
+                type="text"
+                id="prices"
+                placeholder="Example: 100 80 60 70 60 75 85"
+            >
+
+            <div class="buttons">
+                <button onclick="calculateSpan()">
+                    Calculate Span
+                </button>
+
+                <button class="clear-btn" onclick="clearResults()">
+                    Clear
+                </button>
+            </div>
+
+            <p id="error"></p>
+
+        </section>
+
+        <section class="results-section" id="results">
+
+            <h2>Stock Span Results</h2>
+
+            <div class="summary">
+                <div class="summary-card">
+                    <h3 id="totalDays">0</h3>
+                    <p>Total Days</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3 id="averageSpan">0</h3>
+                    <p>Average Span</p>
+                </div>
+            </div>
+
+            <h3>Text Results</h3>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Price</th>
+                            <th>Span</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Graphical Visualization</h3>
+
+            <div id="chart" class="chart">
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Mini Project | Data Structures and Algorithms</p>
+            <p>Implemented using HTML, CSS, JavaScript and C</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
